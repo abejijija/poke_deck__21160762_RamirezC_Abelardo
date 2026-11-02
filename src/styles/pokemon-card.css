@@ -1,0 +1,154 @@
+/* ====== Carta Pokémon: etiqueta pegada en el cuaderno ====== */
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  background: #fff;
+  border: 4px solid var(--ink);
+  border-radius: 16px;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+/* Cada carta se inclina un poco distinto, como pegada a mano */
+.pokemon-card:nth-child(3n + 1) { transform: rotate(-0.8deg); }
+.pokemon-card:nth-child(3n + 2) { transform: rotate(0.6deg); }
+
+.card-top {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-number {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.card-name {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.card-hp {
+  padding: 2px 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: var(--type-color);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+}
+
+/* La imagen va dentro de un círculo del color del tipo */
+.card-image {
+  margin: 0 auto;
+  width: 170px;
+  height: 170px;
+  display: grid;
+  place-items: center;
+  background: var(--type-color);
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+}
+
+.card-image img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.card-types {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.type-badge {
+  padding: 2px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+}
+
+.card-size {
+  margin: 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Habilidades */
+.card-abilities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #f1f6fb;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+}
+
+.ability h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.ability h3 small {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.ability p {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+/* Estadísticas en barras */
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-stats li {
+  display: grid;
+  grid-template-columns: 70px 1fr 32px;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.stat-bar {
+  height: 10px;
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+}
+
+.stat-fill {
+  display: block;
+  height: 100%;
+  background: var(--type-color);
+  border-right: 2px solid var(--ink);
+}
+
+.stat-value {
+  text-align: right;
+}
+
+.card-exp {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
