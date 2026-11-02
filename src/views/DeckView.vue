@@ -38,9 +38,6 @@ onMounted(loadDeck)
       <div class="deck-cap" aria-hidden="true"></div>
       <div class="deck-heading">
         <h1 class="deck-title">El deck de Ash</h1>
-        <p class="deck-subtitle">
-          40 Pokémon que Ash ha tenido en sus viajes, elegidos al azar.
-        </p>
       </div>
 
       <div class="deck-actions">
